@@ -12,4 +12,5 @@ public class Currency {
     public void add(String country, Double currency) {
         countryCurrency.put(country, currency);
     }
+
 }
