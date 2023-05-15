@@ -1,15 +1,25 @@
-import CurrencyConverter.Currency;
+import CurrencyConverter.CurrencyConverter;
+
+import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello world!");
+        CurrencyConverter converter = new CurrencyConverter();
+        converter.add("USD", 1.0);
+        converter.add("EUR", 0.92);
+        converter.add("GBP", 0.80);
 
-        Currency currency = new Currency();
-        currency.add("US", 1.00);
-        currency.add("UK", 0.87);
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter currency to convert from: ");
+        String fromCountry = scanner.nextLine();
 
-        System.out.println(currency);
+        System.out.print("Enter currency to convert to: ");
+        String toCountry = scanner.nextLine();
 
+        System.out.print("Enter amount: ");
+        double amount = scanner.nextDouble();
+
+        Double result = converter.convert(amount, fromCountry, toCountry);
+        System.out.println("Result: " + result + " " + toCountry);
     }
-
 }
