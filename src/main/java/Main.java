@@ -5,9 +5,9 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         CurrencyConverter converter = new CurrencyConverter();
-        converter.add("USD", 1.0);
-        converter.add("EUR", 0.92);
-        converter.add("GBP", 0.80);
+        converter.addCountryAndExchangeRate("USD", 1.0);
+        converter.addCountryAndExchangeRate("EUR", 0.92);
+        converter.addCountryAndExchangeRate("GBP", 0.80);
 
         Scanner scanner = new Scanner(System.in);
         System.out.print("Enter currency to convert from: ");

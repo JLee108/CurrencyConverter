@@ -9,7 +9,7 @@ public class CurrencyConverter {
         this.exchangeRates = new HashMap<>();
     }
 
-    public void add(String currency, double rate) {
+    public void addCountryAndExchangeRate(String currency, double rate) {
         this.exchangeRates.put(currency, rate);
     }
 
